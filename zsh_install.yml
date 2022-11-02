@@ -1,0 +1,27 @@
+---
+- hosts: '{{ target }}'
+#- hosts: all
+  become: true
+  #become_method: sudo
+  tasks:
+  - name: "Install ZSH and Oh"
+    apt:
+      name: zsh
+      state: present
+  - name: Install oh my zsh
+    git:
+      repo: https://github.com/ohmyzsh/ohmyzsh.git
+      dest: ~/.oh-my-zsh
+      depth: 1
+  
+  - name: Copy zshrc
+    copy:
+      src: zsh/zshrc
+      dest: ~/.zshrc
+      mode: 0644
+      
+  - name: Install spaceship prompt
+    git:
+      repo: https://github.com/spaceship-prompt/spaceship-prompt.git
+      dest: ~/.oh-my-zsh/custom/themes/spaceship-prompt
+      depth: 1
