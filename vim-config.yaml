@@ -1,0 +1,10 @@
+- name: Config Vim with plugins
+#- hosts: '{{ target }}'
+  hosts: 159.203.113.41 
+  gather_facts: yes
+  become: yes
+
+  tasks:
+    - name: Configure Vim using role
+      import_role:
+        name: vim

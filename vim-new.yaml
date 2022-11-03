@@ -1,0 +1,32 @@
+---
+# Note: all of these plugins--even the ones being removed in the
+# example--are awesome plugins that I use every day.
+#
+#- hosts: 159.223.166.76
+- hosts: 159.203.113.41
+  vars:
+    vim_removed_packages:
+      - "vim-tiny"
+    vim_owner: "molecule"
+    vim_installed_plugins:
+      - repo: "https://github.com/altercation/vim-colors-solarized.git"
+        type: "start"
+      - repo: "https://github.com/itchyny/lightline.vim.git"
+        type: "start"
+      - repo: "https://github.com/scrooloose/nerdcommenter.git"
+        type: "start"
+      - repo: "https://github.com/skammer/vim-css-color.git"
+        type: "start"
+      - repo: "https://github.com/vim-vdebug/vdebug.git"
+        type: "opt"
+      - repo: "https://github.com/godlygeek/tabular.git"
+        type: "opt"
+    vim_removed_plugins:
+      - directory: "nerdcommenter"
+        type: "start"
+      - directory: "tabular"
+        type: "opt"
+    vim_dotfiles:
+      - "{{ playbook_dir }}/files/dotfiles/.vimrc"
+  roles:
+    - role: ansible-role-vim

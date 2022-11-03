@@ -1,0 +1,20 @@
+galaxy_info:
+  author: Taiwo Akinosho
+  description: Deploy and configure Vim with plugins
+  company: M2M Global
+
+  license: MIT
+
+  min_ansible_version: 2.1
+
+  platforms:
+    - name: Debian
+      versions:
+        - all
+    - name: Ubuntu
+      versions:
+        - bullseye
+
+  galaxy_tags: []
+
+dependencies: []

@@ -1,0 +1,6 @@
+2022-11-03 19:25:47,098 - vim.py - run_command -                            INFO - Command ran successfully: clear
+2022-11-03 19:25:47,099 - vim.py - check_root -                            ERROR - You are not root exiting script...
+2022-11-03 19:25:57,531 - vim.py - pick_user -                            ERROR - the home directory for this user doesn't exist.
+2022-11-03 19:27:05,973 - vim.py - pick_user -                            ERROR - the home directory for this user doesn't exist.
+2022-11-03 19:30:22,827 - vim.py - pick_user -                            ERROR - the home directory for this user doesn't exist.
+2022-11-03 19:31:04,707 - vim.py - pick_user -                            ERROR - the home directory for this user doesn't exist.
