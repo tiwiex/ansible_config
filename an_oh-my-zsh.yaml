@@ -1,0 +1,5 @@
+- hosts: 159.223.166.76
+  roles:
+    - role: ansible-role-oh-my-zsh
+      users:
+        - username: metabase

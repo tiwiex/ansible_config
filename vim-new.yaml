@@ -2,12 +2,13 @@
 # Note: all of these plugins--even the ones being removed in the
 # example--are awesome plugins that I use every day.
 #
-#- hosts: 159.223.166.76
-- hosts: 159.203.113.41
+- hosts: 159.223.166.76
+#- hosts: 159.203.113.41
+#- hosts: localhost
   vars:
     vim_removed_packages:
       - "vim-tiny"
-    vim_owner: "molecule"
+    vim_owner: "root"
     vim_installed_plugins:
       - repo: "https://github.com/altercation/vim-colors-solarized.git"
         type: "start"
